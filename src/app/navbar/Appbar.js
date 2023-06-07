@@ -39,14 +39,15 @@ const ButtonWithImage = ({ href, label, image }) => {
   return (
     <Link href={href}>
       <button
-        className={`py-4 px-5 relative ${isSelected ? 'selected' : ''}`}
+        className={`py-4 px-6 relative ${isSelected ? 'text-hover-text' : ''} hover:text-hover-text `}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
+        
       >
         {label}
         {(isSelected || isHovered) && (
-          <div className="absolute bottom-5 left-0 w-full h-full flex justify-center items-center text-text-color">
+          <div className="absolute bottom-5 left-0 w-full h-full flex justify-center items-center ">
             <img src={image} alt={label} className="max-w-full max-h-full" />
           </div>
         )}
@@ -77,14 +78,15 @@ const Appbar = ({ imageSrc, buttonText }) => {
   };
   return (
     <nav className="fiexd w-full  text-text-color border-y border-icon-color ">
-      <div className="max-w-7xl  flex items-center justify-center">
-        <div className="flex">
+      <div className="  flex items-center justify-center">
+        <div className="flex ">
         {buttons.map((button, index) => (
         <ButtonWithImage
           key={index}
           href={button.href}
           label={button.label}
           image={button.image}
+         
         />
       ))}
           <div className="relative top-3 ml-5 z-10">

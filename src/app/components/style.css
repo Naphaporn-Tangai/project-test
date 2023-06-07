@@ -8,13 +8,14 @@
     display: flex;
     object-fit: cover;
 }
-.swiper-button-next,
-.swiper-button-prev {
+.button-next,
+.button-prev {
   position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
   top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
- 
-  background-repeat: no-repeat
+  margin-top: -2%;
 }

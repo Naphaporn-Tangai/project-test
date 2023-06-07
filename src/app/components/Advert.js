@@ -6,10 +6,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
+import "./style.css"
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
-const CustomImageSlider = () => {
+const Advert = () => {
   const images = [
     {
       src: "http://www.embassycineplex.com/uploads/banner/jnJgdxjfkj202009302025.jpg",
@@ -42,28 +43,28 @@ const CustomImageSlider = () => {
         disableOnInteraction: false,
       }}
       pagination={false}
-      navigation={{
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      }}
       loop={true}
-      className="w-5/6 mt-5"
+      className="w-4/5 mt-5"
+      navigation={{
+        nextEl: ".button-next",
+        prevEl: ".button-prev",
+      }}
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>
-          <div>
+          <div >
             <img src={image.src} alt={image.alt} className="w-full" />
           </div>
         </SwiperSlide>
       ))}
-      <div className="swiper-button-next ">
+      <div className="button-next  right-2 ">
         <img src="/next.png" alt="Next" />
       </div>
-      <div className="swiper-button-prev ">
+      <div className="button-prev left-2 ">
         <img src="/prv.png" alt="Previous" />
       </div>
     </Swiper>
   );
 };
 
-export default CustomImageSlider;
+export default Advert;

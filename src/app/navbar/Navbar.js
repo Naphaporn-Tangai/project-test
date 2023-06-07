@@ -28,7 +28,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex items-center space-x-2 mx-auto pl-1.5 flex-shrink-0">
+        <div className="flex items-center space-x-2 mx-auto pl-1.5 ">
           <p className="text-text-color text-sm mr-3">
             Get Embassy Screens app on
           </p>
@@ -47,6 +47,7 @@ const Navbar = () => {
               alt="google play"
             />
             </a>
+            
           </div>
         </div>
       </div>

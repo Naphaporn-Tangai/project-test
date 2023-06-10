@@ -2,12 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.advert {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    object-fit: cover;
-}
+
 .button-next,
 .button-prev {
   position: absolute;

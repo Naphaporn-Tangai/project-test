@@ -57,7 +57,7 @@ const Advert = () => {
           </div>
         </SwiperSlide>
       ))}
-      <div className="button-next  right-2 ">
+      <div className="button-next right-2 ">
         <img src="/next.png" alt="Next" />
       </div>
       <div className="button-prev left-2 ">

@@ -23,27 +23,27 @@ const ButtonWithImage = ({ href, label, image }) => {
   };
 
   useEffect(() => {
+    const resetButton = () => {
+      setIsSelected(false);
+    };
+  
     if (isSelected) {
-      const resetButton = () => {
-        setIsSelected(false);
-      };
-
       document.addEventListener('click', resetButton);
-
-      return () => {
-        document.removeEventListener('click', resetButton);
-      };
     }
+  
+    return () => {
+      document.removeEventListener('click', resetButton);
+    };
   }, [isSelected]);
 
   return (
     <Link href={href}>
       <button
-        className={`py-4 px-6 relative ${isSelected ? 'text-hover-text' : ''} hover:text-hover-text `}
+        className={`py-4 px-5 relative ${isSelected ? 'text-hover-text' : ''} hover:text-hover-text `}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
-        
+      
       >
         {label}
         {(isSelected || isHovered) && (
@@ -77,8 +77,9 @@ const Appbar = ({ imageSrc, buttonText }) => {
     setIsHovered(!isHovered);
   };
   return (
-    <nav className="fiexd w-full  text-text-color border-y border-icon-color ">
-      <div className="  flex items-center justify-center">
+    <nav className="  text-text-color border-y border-icon-color ">
+      <div className="flex items-center justify-center ">
+       
         <div className="flex ">
         {buttons.map((button, index) => (
         <ButtonWithImage
